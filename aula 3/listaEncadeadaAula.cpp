@@ -50,5 +50,7 @@ class ListaEncadeada {
 
 
 int main() {
-
+    ListaEncadeada lista;
+    lista.inserirUsuarioFinal();
+    
 }
