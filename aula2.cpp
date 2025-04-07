@@ -122,7 +122,7 @@ void editarProduto() {
 
 }
 
-void deletrarProduto() {
+void deletarProduto() {
         
 }
 
