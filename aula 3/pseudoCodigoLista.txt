@@ -1,0 +1,12 @@
+Pré requisitos:
+    Ter uma estrutura que represente um nodo
+        - o nodo terá duas partes
+            - 1º DATA (Quaisquer atributos)
+            - 2º NEXT (ponteiro para o proximo nodo ou NULL)
+
+Funções para CRUD na lista encadeada
+    - Criar nodo
+    - Inserir nodo na lista (final)
+    - Remover nodo (no final)
+    - Percorrer a lista
+
