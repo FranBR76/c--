@@ -29,8 +29,21 @@ void cadastrarCliente() {
     cout << "Informe nome: " << endl;
     cin >> clientes[id].nome;
 
+    cout << "Informe idade: " << endl;
+    cin >> clientes[id].idade;
+    
+    cout << "Informe cpf: " << endl;
+    cin >> clientes[id].cpf;
+
+    cout << "Informe rg: " << endl;
+    cin >> clientes[id].rg;
+
     cout << "Informe Estado Civil: " << endl;
     cin >> clientes[id].estadoCivil;
+    
+    cout << "Informe endereco: " << endl;
+    cin >> clientes[id].endereco;
+    
 }
 
 void listarCliente() {
@@ -44,19 +57,19 @@ void listarCliente() {
 
 void editarCliente() {
     int id;
-    cout << "Informe o indice do cliente: " << endl;
-    cin >> id;
-    cout << "O que você quer editar? - 0 para Sair " << endl << endl;
-
-    cout << "1 - Nome" << endl;
-    cout << "2 - Idade" << endl;
-    cout << "3 - CPF" << endl;
-    cout << "4 - RG" << endl;
-    cout << "5 - Estado Civil" << endl;
-    cout << "6 - Endereço" << endl;
-
+    
     int opcao = 0;
     do {
+        cout << "Informe o indice do cliente: " << endl;
+        cin >> id;
+        cout << "O que você quer editar? - 0 para Sair " << endl << endl;
+    
+        cout << "1 - Nome" << endl;
+        cout << "2 - Idade" << endl;
+        cout << "3 - CPF" << endl;
+        cout << "4 - RG" << endl;
+        cout << "5 - Estado Civil" << endl;
+        cout << "6 - Endereço" << endl;
         cin >> opcao;
 
         switch (opcao) {
@@ -106,8 +119,50 @@ void deletarCliente() {
     clientes[id].endereco = "";
 }
 
+void menu() {
+    
+    int opcao = 0;
+    do {
+        cout << "Selecione o que você quer fazer - 0 para sair" << endl << endl;
+       
+        cout << "1 - Cadastrar" << endl;
+        cout << "2 - Listar" << endl;
+        cout << "3 - Editar" << endl;
+        cout << "4 - Deletar" << endl;
+        cin >> opcao;
+
+        switch (opcao) {
+            case 1:
+                cadastrarCliente();
+                break;
+            case 2:
+                listarCliente();
+                break;
+            case 3:
+                editarCliente();
+                break;
+            case 4:
+                deletarCliente();
+                break;
+
+
+        }
+    } while (opcao != 0);
+    
+    
+}
+
+
 int main() {
     inicializacao();
+    menu();
+
+
+
+
+
+
+
     
 
     return 0;
